@@ -30,3 +30,4 @@ The AR/VR simulation for these headsets is implemented with the [Mixed Reality T
 ## Examples
 
 * [Examples for HoloLens 2](https://docs.microsoft.com/de-de/windows/mixed-reality/develop/features-and-samples?tabs=unity)
+* [Sample Unity projects for OpenXR](https://github.com/microsoft/OpenXR-Unity-MixedReality-Samples)
