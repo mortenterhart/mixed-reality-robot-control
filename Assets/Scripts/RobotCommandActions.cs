@@ -2,14 +2,22 @@
 
 public class RobotCommandActions : MonoBehaviour
 {
-    public void StoreItem(int shelfId)
+    private int _shelfId = -1;
+    
+    public void StoreItem()
     {
-        Debug.Log($"Store {shelfId}");
+        Debug.Log($"Store to shelf {_shelfId}");
     }
 
-    public void LoadItem(int shelfId)
+    public void LoadItem()
     {
-        Debug.Log($"Load {shelfId}");
+        Debug.Log($"Load from shelf {_shelfId}");
+    }
+
+    public void SelectShelf(int shelfId)
+    {
+        Debug.Log($"Selecting shelf {shelfId}");
+        _shelfId = shelfId;
     }
 }
     
