@@ -1913,6 +1913,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4307280561416443136, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
+      propertyPath: m_text
+      value: free
+      objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
@@ -1937,5 +1941,9 @@ PrefabInstance:
       propertyPath: m_text
       value: Say "Select"
       objectReference: {fileID: 0}
+    - target: {fileID: 6792404742919559619, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01e2a5333c08c2b44bda19b2b93db476, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
