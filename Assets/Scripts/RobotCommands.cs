@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using Microsoft.MixedReality.Toolkit.UI;
+using UnityEngine;
 
 public class RobotCommands : MonoBehaviour
 {
+    [SerializeField] private GameObject smallDialogPrefab;
+
     private int shelfId = -1;
     private MRMqttClient client;
 
@@ -12,22 +15,31 @@ public class RobotCommands : MonoBehaviour
 
     public void StoreItem()
     {
-        Debug.Log($"Store to shelf {shelfId}");
-
-        if (shelfId != -1)
+        if (shelfId == -1)
         {
-            client.SendStoreIn(shelfId);
+            ShowSelectShelfDialog();
+            return;
         }
+
+        Debug.Log($"Store to shelf {shelfId}");
+        client.SendStoreIn(shelfId);
     }
 
     public void LoadItem()
     {
-        Debug.Log($"Load from shelf {shelfId}");
-
-        if (shelfId != -1)
+        if (shelfId == -1)
         {
-            client.SendStoreOut(shelfId);
+            ShowSelectShelfDialog();
+            return;
         }
+        
+        Debug.Log($"Load from shelf {shelfId}");
+        client.SendStoreOut(shelfId);
+    }
+
+    private void ShowSelectShelfDialog()
+    {
+        Dialog.Open(smallDialogPrefab, DialogButtonType.OK, "Notice", "Please select a shelf before using this command.", true);
     }
 
     public void SelectShelf(int shelfId)
