@@ -495,8 +495,9 @@ GameObject:
   m_Component:
   - component: {fileID: 474946041}
   - component: {fileID: 474946042}
+  - component: {fileID: 474946043}
   m_Layer: 0
-  m_Name: RobotCommandActions
+  m_Name: RobotCommands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528,6 +529,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdb6392c1b68844cbbb490f796684c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &474946043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474946040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be2e6755d3642d8b6d0f9d2b1555042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brokerAddress: 192.168.1.157
+  brokerPort: 1883
+  isEncrypted: 0
+  connectionDelay: 500
+  timeoutOnConnection: 30000
+  autoConnect: 0
+  mqttUserName: 
+  mqttPassword: 
 --- !u!114 &753887502
 MonoBehaviour:
   m_ObjectHideFlags: 0
