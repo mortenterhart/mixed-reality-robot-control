@@ -408,11 +408,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2774355548356569205, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_Name
-      value: ShelfMarkerButton 6
+      value: ShelfMarkerButton 5
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -456,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307280563277322708, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_text
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -476,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
@@ -529,6 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdb6392c1b68844cbbb490f796684c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smallDialogPrefab: {fileID: 2680377478557818543, guid: 8e686c90124b8e14cbf8093893109e9a, type: 3}
 --- !u!114 &474946043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,11 +604,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2774355548356569205, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_Name
-      value: ShelfMarkerButton 5
+      value: ShelfMarkerButton 6
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -651,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307280563277322708, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_text
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -671,7 +672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
@@ -780,11 +781,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2774355548356569205, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_Name
-      value: ShelfMarkerButton 2
+      value: ShelfMarkerButton 1
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -828,7 +829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307280563277322708, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_text
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -848,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
@@ -1027,12 +1028,12 @@ Transform:
   m_LocalPosition: {x: 5, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2109643361707051438}
   - {fileID: 1651004372}
-  - {fileID: 1767785606}
+  - {fileID: 2109643361707051438}
   - {fileID: 1873483210}
-  - {fileID: 905835891}
+  - {fileID: 1767785606}
   - {fileID: 422675684}
+  - {fileID: 905835891}
   m_Father: {fileID: 1902544138}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1045,11 +1046,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2774355548356569205, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_Name
-      value: ShelfMarkerButton 3
+      value: ShelfMarkerButton 4
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1093,7 +1094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307280563277322708, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_text
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1113,7 +1114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
@@ -1131,11 +1132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2774355548356569205, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_Name
-      value: ShelfMarkerButton 4
+      value: ShelfMarkerButton 3
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1179,7 +1180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307280563277322708, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_text
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1199,7 +1200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
@@ -1888,11 +1889,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2774355548356569205, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_Name
-      value: ShelfMarkerButton 1
+      value: ShelfMarkerButton 2
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2774355549983436436, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1938,6 +1939,10 @@ PrefabInstance:
       propertyPath: m_text
       value: free
       objectReference: {fileID: 0}
+    - target: {fileID: 4307280563277322708, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
+      propertyPath: m_text
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
@@ -1956,7 +1961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4738760018783749846, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6479592119194843951, guid: 4a2f9c2c6205efe4cbc195e66dc1729b, type: 3}
       propertyPath: m_text
