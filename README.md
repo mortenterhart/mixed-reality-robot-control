@@ -1,5 +1,7 @@
 # Mixed Reality Robot Control
 
+[![Latest Release](https://img.shields.io/github/v/release/mortenterhart/mixed-reality-robot-control?logo=github)](https://github.com/mortenterhart/mixed-reality-robot-control/releases/latest)
+
 This project implements a robot control for a [Fischertechnik TXT robot](https://www.fischertechnik.de/en/products/playing/robotics/522429-txt-controller) by using
 a Mixed Reality simulation on the [Microsoft HoloLens 2](https://www.microsoft.com/en-us/hololens/buy) and the [HP Reverb G2](https://www.hp.com/us-en/vr/reverb-g2-vr-headset.html).
 The AR/VR simulation for these headsets is implemented with the [Mixed Reality Toolkit (MRTK) for Unity](https://docs.microsoft.com/de-de/windows/mixed-reality/develop/unity/mrtk-getting-started) by Microsoft.
