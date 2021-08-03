@@ -75,7 +75,7 @@ and extract the ZIP files to your disk.
 
 ![Run Configuration for Microsoft HoloLens 2](https://i.imgur.com/UAKbrqr.png)
 
-7. Start the simulation on the HoloLens using the menu **Debug** --> **Start without Debugging** or press <kbd>Ctrl+F5</kbd>.
+7. Start the simulation on the HoloLens using the menu **Debug** 🡒 **Start without Debugging** or press <kbd>Ctrl+F5</kbd>.
 
 **For HP Reverb G2:**
 
@@ -86,7 +86,7 @@ and extract the ZIP files to your disk.
 
 ![Run Configuration for HP Reverb G2](https://i.imgur.com/ePReOPV.png)
 
-6. Start the simulation on the HP Reverb G2 using the menu **Debug** --> **Start without Debugging** or press <kbd>Ctrl+F5</kbd>.
+6. Start the simulation on the HP Reverb G2 using the menu **Debug** 🡒 **Start without Debugging** or press <kbd>Ctrl+F5</kbd>.
 
 The robot control is now executed on the headsets and can submit commands to the robot over the Raspberry Pi.
 An important requirement for this is that all devices are properly connected to the robot's Wifi.
