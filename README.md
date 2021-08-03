@@ -16,29 +16,29 @@ for this project, only steps 7 and 8 are necessary.
 1. Turn on the Raspberry Pi and login with user `pi` and password `Mrtk2021`.
 2. Install the MQTT broker [Mosquitto](https://mosquitto.org):
 
-```
-$ sudo apt-get install -y mosquitto
-```
+   ```
+   $ sudo apt-get install -y mosquitto
+   ```
 
 3. Install Python3 and `pip3`:
 
-```
-$ sudo apt-get install -y python3 pip3
-```
+   ```
+   $ sudo apt-get install -y python3 pip3
+   ```
 
 4. Install the required Python packages for the control:
 
-```
-$ pip3 install ftrobopy paho-mqtt
-```
+   ```
+   $ pip3 install ftrobopy paho-mqtt
+   ```
 
 5. Restart the Raspberry Pi with `sudo reboot` to start Mosquitto in order to accept commands.
 6. Clone the repository and change into the `HighBayStorageRack` directory:
 
-```
-$ git clone https://github.com/mortenterhart/mixed-reality-robot-control
-$ cd mixed-reality-robot-control/HighBayStorageRack
-```
+   ```
+   $ git clone https://github.com/mortenterhart/mixed-reality-robot-control
+   $ cd mixed-reality-robot-control/HighBayStorageRack
+   ```
 
 This directory contains the Python script `hbsr.py` that receives the commands and redirects them
 to the robot.
@@ -49,9 +49,9 @@ to the robot.
    
 8. Run `hbsr.py` to start the robot control:
 
-```
-$ python3 hbsr.py
-```
+   ```
+   $ python3 hbsr.py
+   ```
 
 Now the Raspberry Pi is ready to accept commands from the headsets and redirect them to the robot.
 
@@ -73,7 +73,7 @@ and extract the ZIP files to your disk.
 5. Open the solution file `mr-robot-control.sln` from the AR build in Visual Studio.
 6. Select the run configuration **Master**, the platform **ARM64** and the deployment target **Device**:
 
-![Run Configuration for Microsoft HoloLens 2](https://i.imgur.com/UAKbrqr.png)
+   ![Run Configuration for Microsoft HoloLens 2](https://i.imgur.com/UAKbrqr.png)
 
 7. Start the simulation on the HoloLens using the menu **Debug** 🡒 **Start without Debugging** or press <kbd>Ctrl+F5</kbd>.
 
@@ -84,7 +84,7 @@ and extract the ZIP files to your disk.
 4. Open the solution file `mr-robot-control.sln` from the VR build in Visual Studio.
 5. Select the run configuration **Master**, the platform **x86** and the deployment target **Local Computer**:
 
-![Run Configuration for HP Reverb G2](https://i.imgur.com/ePReOPV.png)
+   ![Run Configuration for HP Reverb G2](https://i.imgur.com/ePReOPV.png)
 
 6. Start the simulation on the HP Reverb G2 using the menu **Debug** 🡒 **Start without Debugging** or press <kbd>Ctrl+F5</kbd>.
 
