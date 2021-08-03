@@ -40,8 +40,8 @@ for this project, only steps 7 and 8 are necessary.
    $ cd mixed-reality-robot-control/HighBayStorageRack
    ```
 
-This directory contains the Python script `hbsr.py` that receives the commands and redirects them
-to the robot.
+   This directory contains the Python script `hbsr.py` that receives the commands and redirects them
+   to the robot.
 
 7. Connect the Raspberry Pi to the robot's Wifi `ft-txt_5528`. Instructions for this can be found
    [here](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md). The
