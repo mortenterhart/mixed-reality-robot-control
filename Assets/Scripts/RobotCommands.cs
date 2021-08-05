@@ -8,12 +8,18 @@ public class RobotCommands : MonoBehaviour
     private static readonly Color ColorFreeShelf = new Color(0.11f, 0.75f, 0f);
     private static readonly Color ColorOccupiedShelf = new Color(0.9f, 0f, 0f);
     
+    private static readonly int ParamShelfId = Animator.StringToHash("shelfId");
+    private static readonly int TriggerStoreIn = Animator.StringToHash("StoreIn");
+    private static readonly int TriggerStoreOut = Animator.StringToHash("StoreOut");
+    
     [SerializeField] private GameObject smallDialogPrefab;
 
+    [SerializeField] private Animator robotAnimator;
+    [SerializeField] private Animator objectAnimator;
     [SerializeField] private List<GameObject> shelfButtonQuads;
     [SerializeField] private TextMeshPro selectedShelfText;
 
-    private int shelfId = -1;
+    private int selectedShelfId = -1;
     private MRMqttClient client;
 
     private void Start()
@@ -24,36 +30,44 @@ public class RobotCommands : MonoBehaviour
 
     public void StoreItem()
     {
-        if (shelfId == -1)
+        if (selectedShelfId == -1)
         {
             ShowSelectShelfDialog();
             return;
         }
 
-        Debug.Log($"Store to shelf {shelfId}");
+        Debug.Log($"Store to shelf {selectedShelfId}");
+        
         SetShelfButtonQuadColor(ColorOccupiedShelf);
-        client.SendStoreIn(shelfId);
+        robotAnimator.SetTrigger(TriggerStoreIn);
+            
+        client.SendStoreIn(selectedShelfId);
     }
 
     public void LoadItem()
     {
-        if (shelfId == -1)
+        if (selectedShelfId == -1)
         {
             ShowSelectShelfDialog();
             return;
         }
         
-        Debug.Log($"Load from shelf {shelfId}");
+        Debug.Log($"Load from shelf {selectedShelfId}");
+        
         SetShelfButtonQuadColor(ColorFreeShelf);
-        client.SendStoreOut(shelfId);
+        robotAnimator.SetTrigger(TriggerStoreOut);
+        
+        client.SendStoreOut(selectedShelfId);
     }
     
     public void SelectShelf(int shelfId)
     {
         Debug.Log($"Selecting shelf {shelfId}");
-        this.shelfId = shelfId;
-
+        
+        selectedShelfId = shelfId;
         selectedShelfText.text = $"{shelfId}";
+        
+        robotAnimator.SetInteger(ParamShelfId, shelfId);
     }
 
     private void ShowSelectShelfDialog()
@@ -63,7 +77,7 @@ public class RobotCommands : MonoBehaviour
 
     private void SetShelfButtonQuadColor(Color color)
     {
-        var quadRenderer = shelfButtonQuads[shelfId - 1].GetComponent<Renderer>();
+        var quadRenderer = shelfButtonQuads[selectedShelfId - 1].GetComponent<Renderer>();
         quadRenderer.material.color = color;
     }
 }
