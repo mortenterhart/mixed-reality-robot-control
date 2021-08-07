@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Microsoft.MixedReality.Toolkit.UI;
 using TMPro;
 using UnityEngine;
@@ -19,13 +20,23 @@ public class RobotCommands : MonoBehaviour
     [SerializeField] private List<GameObject> shelfButtonQuads;
     [SerializeField] private TextMeshPro selectedShelfText;
 
-    private int selectedShelfId = -1;
+    [SerializeField] private GameObject storageObject;
+    // [SerializeField] private List<GameObject> objectPositions;
+    [SerializeField] private List<AnimationClip> objectStoreInAnimations;
+    [SerializeField] private List<AnimationClip> objectStoreOutAnimations;
+
     private MRMqttClient client;
+    private int selectedShelfId = -1;
+    
+    private int objectPos = 0;
+    private StorageObject storageObjectScript;
 
     private void Start()
     {
         client = GetComponent<MRMqttClient>();
         selectedShelfText.text = "";
+
+        storageObjectScript = storageObject.GetComponent<StorageObject>();
     }
 
     public void StoreItem()
@@ -40,8 +51,19 @@ public class RobotCommands : MonoBehaviour
         
         SetShelfButtonQuadColor(ColorOccupiedShelf);
         robotAnimator.SetTrigger(TriggerStoreIn);
+        if (objectPos == 0)
+        {
+            Debug.Log($"Animate object: Store in {selectedShelfId}");
+            objectAnimator.SetTrigger(TriggerStoreIn);
+            objectPos = selectedShelfId;
+            storageObjectScript.SetObjectPos(objectPos);
             
-        client.SendStoreIn(selectedShelfId);
+            // StartObjectStoreInAnimation();
+
+            // Invoke(nameof(SetStorageObjectParentPosition), objectStoreInAnimations[selectedShelfId - 1].length + 0.5f);
+        }
+            
+        // client.SendStoreIn(selectedShelfId);
     }
 
     public void LoadItem()
@@ -56,8 +78,16 @@ public class RobotCommands : MonoBehaviour
         
         SetShelfButtonQuadColor(ColorFreeShelf);
         robotAnimator.SetTrigger(TriggerStoreOut);
+        if (objectPos == selectedShelfId)
+        {
+            objectAnimator.SetTrigger(TriggerStoreOut);
+            objectPos = 0;
+            storageObjectScript.SetObjectPos(objectPos);
+            
+            // Invoke(nameof(SetStorageObjectParentPosition), objectStoreOutAnimations[selectedShelfId - 1].length);
+        }
         
-        client.SendStoreOut(selectedShelfId);
+        // client.SendStoreOut(selectedShelfId);
     }
     
     public void SelectShelf(int shelfId)
@@ -68,6 +98,7 @@ public class RobotCommands : MonoBehaviour
         selectedShelfText.text = $"{shelfId}";
         
         robotAnimator.SetInteger(ParamShelfId, shelfId);
+        objectAnimator.SetInteger(ParamShelfId, shelfId);
     }
 
     private void ShowSelectShelfDialog()
@@ -75,10 +106,117 @@ public class RobotCommands : MonoBehaviour
         Dialog.Open(smallDialogPrefab, DialogButtonType.OK, "Notice", "Please select a shelf before using this command.", true);
     }
 
+    /*public void SetStorageObjectParentPosition()
+    {
+        Debug.Log("Set object position to " + objectPositions[objectPos].transform.position);
+        storageObject.transform.position = objectPositions[objectPos].transform.position;
+    }*/
+
     private void SetShelfButtonQuadColor(Color color)
     {
         var quadRenderer = shelfButtonQuads[selectedShelfId - 1].GetComponent<Renderer>();
         quadRenderer.material.color = color;
+    }
+
+    private void StartObjectStoreInAnimation()
+    {
+        switch (selectedShelfId)
+        {
+            case 1:
+                StartCoroutine(AnimateObjectStoreIn1());
+                break;
+        }
+    }
+
+    private IEnumerator MoveObjectTimed(Vector3 move, float duration)
+    {
+        var startPos = storageObject.transform.position;
+        var endPos = startPos + move;
+        
+        var timer = 0f;
+        while (timer < duration)
+        {
+            storageObject.transform.position = Vector3.Lerp(startPos, endPos, timer / duration);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    private IEnumerator AnimateObjectStoreIn1()
+    {
+        // yield return new WaitForSeconds(6 + 40 / 60f);
+        yield return new WaitForSeconds(6.94f);
+
+        yield return StartCoroutine(MoveObjectTimed(new Vector3(0, 0.02f, 0), 20 / 60f));
+        yield return StartCoroutine(MoveObjectTimed(new Vector3(0, 0, 0.4f), 3f));
+        yield return StartCoroutine(MoveObjectTimed(new Vector3(-0.975f, 1.2f, 0), 5f));
+        yield return StartCoroutine(MoveObjectTimed(new Vector3(0, 0, -0.4f), 3f));
+        yield return StartCoroutine(MoveObjectTimed(new Vector3(0, -0.02f, 0), 20 / 60f));
+        
+        /*var duration = 20/60f;
+        var timer = 0f;
+        
+        var startPos = storageObject.transform.position;
+        var endPos = startPos + new Vector3(0, 0.02f, 0);
+        
+        while (timer < duration)
+        {
+            storageObject.transform.position = Vector3.Lerp(startPos, endPos, timer / duration);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        
+        duration = 3f;
+        timer = 0f;
+
+        startPos = endPos;
+        endPos = startPos + new Vector3(0, 0, 0.4f);
+
+        while (timer < duration)
+        {
+            storageObject.transform.position = Vector3.Lerp(startPos, endPos, timer / duration);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        duration = 5f;
+        timer = 0f;
+
+        startPos = endPos;
+        endPos = startPos + new Vector3(-0.975f, 1.2f, 0);
+
+        while (timer < duration)
+        {
+            storageObject.transform.position = Vector3.Lerp(startPos, endPos, timer / duration);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        duration = 3f;
+        timer = 0f;
+
+        startPos = endPos;
+        endPos = startPos + new Vector3(0, 0, -0.4f);
+
+        while (timer < duration)
+        {
+            storageObject.transform.position = Vector3.Lerp(startPos, endPos, timer / duration);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        duration = 20/60f;
+        timer = 0f;
+        
+        startPos = endPos;
+        endPos = startPos + new Vector3(0, -0.02f, 0);
+        
+        while (timer < duration)
+        {
+            storageObject.transform.position = Vector3.Lerp(startPos, endPos, timer / duration);
+            timer += Time.deltaTime;
+            yield return null;
+        }*/
     }
 }
     
