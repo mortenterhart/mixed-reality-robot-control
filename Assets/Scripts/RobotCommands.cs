@@ -57,7 +57,7 @@ public class RobotCommands : MonoBehaviour
             robotAnimator.SetBool(ParamMoveObject, false);
         }
             
-        // client.SendStoreIn(selectedShelfId);
+        client.SendStoreIn(selectedShelfId);
     }
 
     public void LoadItem()
@@ -85,7 +85,7 @@ public class RobotCommands : MonoBehaviour
             robotAnimator.SetBool(ParamMoveObject, false);
         }
         
-        // client.SendStoreOut(selectedShelfId);
+        client.SendStoreOut(selectedShelfId);
     }
     
     public void SelectShelf(int shelfId)

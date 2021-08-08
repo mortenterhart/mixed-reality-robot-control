@@ -689,7 +689,7 @@ MonoBehaviour:
   isEncrypted: 0
   connectionDelay: 500
   timeoutOnConnection: 30000
-  autoConnect: 0
+  autoConnect: 1
   mqttUserName: me
   mqttPassword: absdef
 --- !u!1 &476024987
