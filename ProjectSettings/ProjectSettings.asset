@@ -132,7 +132,6 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: -8049287926053155980, guid: 7880a6a02c3608e4daaa3e7f1448b84c, type: 2}
   - {fileID: -5126515231215017064, guid: f27140738cd455c48a398316ae54ddbb, type: 2}
-  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -605,11 +604,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: MixedRealityRobotControl
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: Ruhr University Bochum
+  metroCertificateIssuer: Ruhr University Bochum
+  metroCertificateNotAfter: 80862037adabd801
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: mr-robot-control

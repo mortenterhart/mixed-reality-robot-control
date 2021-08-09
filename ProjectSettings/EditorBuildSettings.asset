@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/VR_CommandPanel.unity
     guid: ed8d952265caf064a8b4aaefa3788de3
   m_configObjects:

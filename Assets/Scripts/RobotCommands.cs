@@ -41,6 +41,12 @@ public class RobotCommands : MonoBehaviour
         }
 
         Debug.Log($"Store to shelf {selectedShelfId}");
+        
+        if (objectPos == 0)
+        {
+            objectPos = selectedShelfId;
+            SetShelfButtonQuadColor(ColorOccupiedShelf);
+        }
 
         if (robotAnimator != null)
         {
@@ -48,11 +54,9 @@ public class RobotCommands : MonoBehaviour
 
             if (objectPos == 0)
             {
-                objectPos = selectedShelfId;
                 storageObjectScript.SetObjectPos(objectPos);
 
                 robotAnimator.SetBool(ParamMoveObject, true);
-                SetShelfButtonQuadColor(ColorOccupiedShelf);
             }
             else
             {
@@ -72,6 +76,12 @@ public class RobotCommands : MonoBehaviour
         }
         
         Debug.Log($"Load from shelf {selectedShelfId}");
+        
+        if (objectPos == selectedShelfId)
+        {
+            objectPos = 0;
+            SetShelfButtonQuadColor(ColorFreeShelf);
+        }
 
         if (robotAnimator != null)
         {
@@ -79,11 +89,9 @@ public class RobotCommands : MonoBehaviour
 
             if (objectPos == selectedShelfId)
             {
-                objectPos = 0;
                 storageObjectScript.SetObjectPos(objectPos);
 
                 robotAnimator.SetBool(ParamMoveObject, true);
-                SetShelfButtonQuadColor(ColorFreeShelf);
             }
             else
             {
