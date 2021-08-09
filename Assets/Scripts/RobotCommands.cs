@@ -100,8 +100,11 @@ public class RobotCommands : MonoBehaviour
         
         selectedShelfId = shelfId;
         selectedShelfText.text = $"{shelfId}";
-        
-        robotAnimator.SetInteger(ParamShelfId, shelfId);
+
+        if (robotAnimator != null)
+        {
+            robotAnimator.SetInteger(ParamShelfId, shelfId);
+        }
     }
 
     private void ShowSelectShelfDialog()
