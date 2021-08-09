@@ -42,7 +42,6 @@ public class RobotCommands : MonoBehaviour
 
         Debug.Log($"Store to shelf {selectedShelfId}");
         
-        SetShelfButtonQuadColor(ColorOccupiedShelf);
         robotAnimator.SetTrigger(TriggerStoreIn);
         
         if (objectPos == 0)
@@ -51,6 +50,7 @@ public class RobotCommands : MonoBehaviour
             storageObjectScript.SetObjectPos(objectPos);
             
             robotAnimator.SetBool(ParamMoveObject, true);
+            SetShelfButtonQuadColor(ColorOccupiedShelf);
         }
         else
         {
@@ -69,8 +69,7 @@ public class RobotCommands : MonoBehaviour
         }
         
         Debug.Log($"Load from shelf {selectedShelfId}");
-        
-        SetShelfButtonQuadColor(ColorFreeShelf);
+
         robotAnimator.SetTrigger(TriggerStoreOut);
         
         if (objectPos == selectedShelfId)
@@ -79,6 +78,7 @@ public class RobotCommands : MonoBehaviour
             storageObjectScript.SetObjectPos(objectPos);
             
             robotAnimator.SetBool(ParamMoveObject, true);
+            SetShelfButtonQuadColor(ColorFreeShelf);
         }
         else
         {

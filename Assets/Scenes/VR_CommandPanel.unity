@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 70099204}
   - component: {fileID: 70099207}
-  - component: {fileID: 70099206}
   - component: {fileID: 70099205}
   m_Layer: 0
   m_Name: Title
@@ -253,14 +252,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!222 &70099206
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70099203}
-  m_CullTransparentMesh: 0
 --- !u!23 &70099207
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -477,6 +468,10 @@ PrefabInstance:
       value: Quad4
       objectReference: {fileID: 0}
     - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
+      propertyPath: iconStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
       propertyPath: seeItSayItLabel
       value: 
       objectReference: {fileID: 0}
@@ -508,7 +503,8 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2186118088989256957, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
 --- !u!4 &413215962 stripped
 Transform:
@@ -579,6 +575,10 @@ PrefabInstance:
       value: Quad3
       objectReference: {fileID: 0}
     - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
+      propertyPath: iconStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
       propertyPath: seeItSayItLabel
       value: 
       objectReference: {fileID: 0}
@@ -610,7 +610,8 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2186118088989256957, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
 --- !u!4 &440167284 stripped
 Transform:
@@ -786,6 +787,10 @@ PrefabInstance:
       value: Quad5
       objectReference: {fileID: 0}
     - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
+      propertyPath: iconStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
       propertyPath: seeItSayItLabel
       value: 
       objectReference: {fileID: 0}
@@ -817,7 +822,8 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2186118088989256957, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
 --- !u!4 &492968712 stripped
 Transform:
@@ -1176,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2186118089576693004, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
       propertyPath: m_Name
-      value: ShelfButton
+      value: SelectedShelfButton
       objectReference: {fileID: 0}
     - target: {fileID: 3772797805871918332, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
       propertyPath: m_IsActive
@@ -1186,6 +1192,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ec72a3a105768f746b556a8dfdae61a8, type: 2}
+    - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
+      propertyPath: iconStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8725071565966185391, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
       propertyPath: InputActionId
       value: 0
@@ -1194,7 +1204,8 @@ PrefabInstance:
       propertyPath: enabledOnStart
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2186118088989256957, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
 --- !u!4 &784879766 stripped
 Transform:
@@ -1332,7 +1343,9 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: RobotCommands, Assembly-CSharp
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2204069621878992594, guid: 3f1f46cbecbe08e46a303ccfdb5b498a, type: 3}
+    - {fileID: 6241848921227587195, guid: 3f1f46cbecbe08e46a303ccfdb5b498a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f1f46cbecbe08e46a303ccfdb5b498a, type: 3}
 --- !u!4 &954861167 stripped
 Transform:
@@ -1349,7 +1362,6 @@ GameObject:
   m_Component:
   - component: {fileID: 999471874}
   - component: {fileID: 999471877}
-  - component: {fileID: 999471876}
   - component: {fileID: 999471875}
   m_Layer: 0
   m_Name: Title
@@ -1469,14 +1481,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!222 &999471876
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999471873}
-  m_CullTransparentMesh: 0
 --- !u!23 &999471877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2130,7 +2134,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1287232959}
   - component: {fileID: 1287232962}
-  - component: {fileID: 1287232961}
   - component: {fileID: 1287232960}
   m_Layer: 0
   m_Name: SelectedShelfLabel
@@ -2250,14 +2253,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!222 &1287232961
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287232958}
-  m_CullTransparentMesh: 0
 --- !u!23 &1287232962
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2398,6 +2393,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 01e2a5333c08c2b44bda19b2b93db476, type: 2}
     - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
+      propertyPath: iconStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
       propertyPath: seeItSayItLabel
       value: 
       objectReference: {fileID: 0}
@@ -2429,7 +2428,8 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2186118088989256957, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
 --- !u!4 &1310516992 stripped
 Transform:
@@ -2649,7 +2649,9 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: RobotCommands, Assembly-CSharp
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2204069621878992594, guid: 3f1f46cbecbe08e46a303ccfdb5b498a, type: 3}
+    - {fileID: 6241848921227587195, guid: 3f1f46cbecbe08e46a303ccfdb5b498a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f1f46cbecbe08e46a303ccfdb5b498a, type: 3}
 --- !u!4 &1486284541 stripped
 Transform:
@@ -3105,6 +3107,10 @@ PrefabInstance:
       value: Quad6
       objectReference: {fileID: 0}
     - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
+      propertyPath: iconStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
       propertyPath: seeItSayItLabel
       value: 
       objectReference: {fileID: 0}
@@ -3136,7 +3142,8 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2186118088989256957, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
 --- !u!4 &2124586542 stripped
 Transform:
@@ -5027,6 +5034,10 @@ PrefabInstance:
       value: Quad2
       objectReference: {fileID: 0}
     - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
+      propertyPath: iconStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386849100626695989, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
       propertyPath: seeItSayItLabel
       value: 
       objectReference: {fileID: 0}
@@ -5058,7 +5069,8 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2186118088989256957, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd9cd0ef0491144ebc020f02c6852c3, type: 3}
 --- !u!33 &5016259129464277137
 MeshFilter:

@@ -10,15 +10,6 @@
         "com.unity.xr.arfoundation": "4.1.7"
       }
     },
-    "com.microsoft.mixedreality.toolkit.examples": {
-      "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.examples-2.7.0.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.microsoft.mixedreality.toolkit.foundation": "2.7.0",
-        "com.microsoft.mixedreality.toolkit.extensions": "2.7.0"
-      }
-    },
     "com.microsoft.mixedreality.toolkit.extensions": {
       "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.extensions-2.7.0.tgz",
       "depth": 0,
@@ -42,6 +33,12 @@
       "dependencies": {
         "com.unity.textmeshpro": "2.1.4"
       }
+    },
+    "com.microsoft.spatialaudio.spatializer.unity": {
+      "version": "file:MixedReality/com.microsoft.spatialaudio.spatializer.unity-1.0.196.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
     },
     "com.unity.collab-proxy": {
       "version": "1.5.7",
