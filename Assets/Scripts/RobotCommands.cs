@@ -41,10 +41,13 @@ public class RobotCommands : MonoBehaviour
         }
 
         Debug.Log($"Store to shelf {selectedShelfId}");
-        
+
+        var moveObject = false;
         if (objectPos == 0)
         {
+            moveObject = true;
             objectPos = selectedShelfId;
+            
             SetShelfButtonQuadColor(ColorOccupiedShelf);
         }
 
@@ -52,16 +55,12 @@ public class RobotCommands : MonoBehaviour
         {
             robotAnimator.SetTrigger(TriggerStoreIn);
 
-            if (objectPos == 0)
+            if (moveObject)
             {
                 storageObjectScript.SetObjectPos(objectPos);
-
-                robotAnimator.SetBool(ParamMoveObject, true);
             }
-            else
-            {
-                robotAnimator.SetBool(ParamMoveObject, false);
-            }
+            
+            robotAnimator.SetBool(ParamMoveObject, moveObject);
         }
 
         client.SendStoreIn(selectedShelfId);
@@ -76,10 +75,13 @@ public class RobotCommands : MonoBehaviour
         }
         
         Debug.Log($"Load from shelf {selectedShelfId}");
-        
+
+        var moveObject = false;
         if (objectPos == selectedShelfId)
         {
+            moveObject = true;
             objectPos = 0;
+
             SetShelfButtonQuadColor(ColorFreeShelf);
         }
 
@@ -87,16 +89,12 @@ public class RobotCommands : MonoBehaviour
         {
             robotAnimator.SetTrigger(TriggerStoreOut);
 
-            if (objectPos == selectedShelfId)
+            if (moveObject)
             {
                 storageObjectScript.SetObjectPos(objectPos);
+            }
 
-                robotAnimator.SetBool(ParamMoveObject, true);
-            }
-            else
-            {
-                robotAnimator.SetBool(ParamMoveObject, false);
-            }
+            robotAnimator.SetBool(ParamMoveObject, moveObject);
         }
 
         client.SendStoreOut(selectedShelfId);
