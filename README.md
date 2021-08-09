@@ -61,8 +61,9 @@ Now the Raspberry Pi is ready to accept commands from the headsets and redirect 
 
 The following instructions explain how to transfer the AR and VR simulation of the control from the PC
 to the Microsoft HoloLens 2 and the HP Reverb G2. To execute the control, install [Visual Studio 2019](https://visualstudio.microsoft.com/de/downloads)
-with the workloads [**Development with C/C++**](https://visualstudio.microsoft.com/vs/features/cplusplus/)
-and [**Universal Windows Platform (UWP)**](https://visualstudio.microsoft.com/vs/features/universal-windows-platform/).
+with the workloads [**Development with C++**](https://visualstudio.microsoft.com/vs/features/cplusplus/)
+and [**Development for Universal Windows Platform (UWP)**](https://visualstudio.microsoft.com/vs/features/universal-windows-platform/).
+More information on the required software can be found [here](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/install-the-tools#installation-checklist).
 
 1. Download the Unity builds for AR and VR from <https://github.com/mortenterhart/mixed-reality-robot-control/releases/latest>
 and extract the ZIP files to your disk.
