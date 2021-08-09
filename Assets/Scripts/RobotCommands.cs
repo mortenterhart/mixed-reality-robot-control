@@ -41,22 +41,25 @@ public class RobotCommands : MonoBehaviour
         }
 
         Debug.Log($"Store to shelf {selectedShelfId}");
-        
-        robotAnimator.SetTrigger(TriggerStoreIn);
-        
-        if (objectPos == 0)
+
+        if (robotAnimator != null)
         {
-            objectPos = selectedShelfId;
-            storageObjectScript.SetObjectPos(objectPos);
-            
-            robotAnimator.SetBool(ParamMoveObject, true);
-            SetShelfButtonQuadColor(ColorOccupiedShelf);
+            robotAnimator.SetTrigger(TriggerStoreIn);
+
+            if (objectPos == 0)
+            {
+                objectPos = selectedShelfId;
+                storageObjectScript.SetObjectPos(objectPos);
+
+                robotAnimator.SetBool(ParamMoveObject, true);
+                SetShelfButtonQuadColor(ColorOccupiedShelf);
+            }
+            else
+            {
+                robotAnimator.SetBool(ParamMoveObject, false);
+            }
         }
-        else
-        {
-            robotAnimator.SetBool(ParamMoveObject, false);
-        }
-            
+
         client.SendStoreIn(selectedShelfId);
     }
 
@@ -70,21 +73,24 @@ public class RobotCommands : MonoBehaviour
         
         Debug.Log($"Load from shelf {selectedShelfId}");
 
-        robotAnimator.SetTrigger(TriggerStoreOut);
-        
-        if (objectPos == selectedShelfId)
+        if (robotAnimator != null)
         {
-            objectPos = 0;
-            storageObjectScript.SetObjectPos(objectPos);
-            
-            robotAnimator.SetBool(ParamMoveObject, true);
-            SetShelfButtonQuadColor(ColorFreeShelf);
+            robotAnimator.SetTrigger(TriggerStoreOut);
+
+            if (objectPos == selectedShelfId)
+            {
+                objectPos = 0;
+                storageObjectScript.SetObjectPos(objectPos);
+
+                robotAnimator.SetBool(ParamMoveObject, true);
+                SetShelfButtonQuadColor(ColorFreeShelf);
+            }
+            else
+            {
+                robotAnimator.SetBool(ParamMoveObject, false);
+            }
         }
-        else
-        {
-            robotAnimator.SetBool(ParamMoveObject, false);
-        }
-        
+
         client.SendStoreOut(selectedShelfId);
     }
     
